@@ -11,6 +11,10 @@ function convertToObject(sourceString) {
   const dataObject = {};
 
   convertedString.forEach((item) => {
+    if (!item.trim()) {
+      return;
+    }
+
     const keyValue = item.split(':');
 
     if (keyValue.length === 2) {
